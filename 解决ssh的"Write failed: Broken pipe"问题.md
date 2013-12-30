@@ -14,18 +14,18 @@
 
 解决方法
 
-方法一：在客户端设置(前提，你的办公本本或者pc 是os 是一个linux)
+**方法一：** 在客户端设置(前提，你的办公本本或者pc 是os 是一个linux)
 在客户端电脑上编辑（需要root权限）/etc/ssh/ssh_config，并添加如下一行：
 
     ServerAliveInterval 60
 
-方法二：在服务器端设置
+**方法二：** 在服务器端设置
 如果有相应的权限，也可以在服务器端设置，即编辑/etc/ssh/sshd_config，并添加：
 
     ClientAliveInterval 60
 
 
-方法三：如果您只想让当前的 ssh 保持连接，可以使用以下的命令：
+**方法三：** 如果您只想让当前的 ssh 保持连接，可以使用以下的命令：
 
     $ ssh -o ServerAliveInterval=60 user@sshserver
 
